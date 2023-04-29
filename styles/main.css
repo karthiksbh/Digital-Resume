@@ -70,7 +70,7 @@ li{
 }
 
 #user-name{
-    font-size: 45px;
+    font-size: 40px;
     line-height: 1.2em;
 }
 
@@ -162,31 +162,67 @@ li{
     height: 1px;
 }
 
-
-@media(max-width:600px){
-
-    .section--page{
-        padding-top: 1em;
-        padding-bottom: 1em;
+/* For screens smaller than 600px */
+@media (max-width: 600px) {
+    #wrapper--hero {
+      flex-direction: column;
+      gap: 1em;
     }
-
-    #wrapper--hero{
-        display: flex;
-        align-items: center;
-        gap: 1em;
+  
+    #profile-pic {
+      width: 200px;
+      height: 200px;
     }
-
-    #profile-pic{
-        width: 200px;
-        height: 200px;
+  
+    .card--work-history {
+      border-left: none;
+      padding-left: 0;
     }
-
-    #wrapper--hero{
-        flex-direction: column;
+  
+    #container--main {
+      padding: 0.5em;
     }
-
-    .card--work-history{
-        border-left: none;
-        padding-left: 0;
+  }
+  
+  /* For screens larger than 600px */
+  @media (min-width: 600px) {
+    #wrapper--hero {
+      gap: 2em;
     }
-}
+  
+    #profile-pic {
+      width: 250px;
+      height: 250px;
+    }
+  }
+  
+  /* For screens larger than 900px */
+  @media (min-width: 900px) {
+    #container--main {
+      padding: 1em;
+    }
+  }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: var(--mainBgColor);
+    border-bottom: 1px solid var(--mainBorderColor);
+    margin-bottom: 1em;
+    flex-wrap: wrap;
+  }
+  
+  .navbar a {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--mainTextColor);
+    text-decoration: none;
+    margin: 0 1em;
+    transition: color 0.3s;
+  }
+  
+  .navbar a:hover {
+    color: var(--mainLinkColor);
+  }
