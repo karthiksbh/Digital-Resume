@@ -226,3 +226,89 @@ li{
   .navbar a:hover {
     color: var(--mainLinkColor);
   }
+
+  .lang {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: var(--secondaryTextColor);
+    font-size: 1em;
+    border-top: 1px solid var(--mainBorderColor);
+    margin-bottom: 15px;
+  }
+
+  .contact-me p {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: var(--secondaryTextColor);
+    font-size: 1em;
+    border-top: 1px solid var(--mainBorderColor);
+    margin-bottom: 15px;
+  }
+  .contact-me input[type="text"],
+  .contact-me input[type="email"],
+  .contact-me textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    margin-bottom: 25px;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  .contact-me button[type="submit"] {
+    background-color: var(--mainTextColor);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-me button[type="submit"]:hover {
+    background-color: var(--mainTextColor);
+  }
+
+  .btn-submit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Added */
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+#overlay img {
+    width: 275px;
+    height: 350px;
+}
+
+#closeButtonWrapper {
+    margin-top: 10px;
+}
+
+#openButton {
+    cursor: pointer;
+}
+
+#closeButton {
+  cursor: pointer;
+}
