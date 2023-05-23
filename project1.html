@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="./styles/main.css">
     </head>
     <body>
+        <button id="mode-toggle">Switch Theme >>></button>
         <div id="container--main">
             <a href="index.html">&#x2190;Go Back</a>
             <h1>Built backend for the IETE Recruitment Portal (Quiz App)</h1>
@@ -35,4 +36,12 @@
             </ul>
         </div>
     </body>
+    <script>
+        const modeToggle = document.getElementById("mode-toggle");
+        const body = document.body;
+
+        modeToggle.addEventListener("click", () => {
+            body.classList.toggle("light-mode");
+        });
+    </script>
 </html>

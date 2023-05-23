@@ -1,25 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
 
-:root{
-    --mainTextColor-light:#000;
-    --secondaryTextColor-light:rgb(51 51 51);
-    --mainLinkColor-light:#0da2b8;
-    --mainBorderColor-light:rgb(218, 218, 218);
-    --mainBgColor-light:rgb(249, 250,251);
+:root {
+  --mainTextColor-light: #000;
+  --secondaryTextColor-light: rgb(51, 51, 51);
+  --mainLinkColor-light: #0da2b8;
+  --mainBorderColor-light: rgb(218, 218, 218);
+  --mainBgColor-light: rgb(249, 250, 251);
 
-    --mainTextColor-dark:rgb(0, 166, 238);
-    --secondaryTextColor-dark:#adb0b1;
-    --mainLinkColor-dark:rgb(30, 190,214);
-    --mainBorderColor-dark:#fff;
-    --mainBgColor-dark:#0d1018;
-    
-    --mainTextColor:var(--mainTextColor-dark);
-    --secondaryTextColor:var(--secondaryTextColor-dark);
-    --mainLinkColor:var(--mainLinkColor-dark);
-    --mainBorderColor:var(--mainBorderColor-dark);
-    --mainBgColor:var(--mainBgColor-dark);
+  --mainTextColor-dark: rgb(0, 166, 238);
+  --secondaryTextColor-dark: #adb0b1;
+  --mainLinkColor-dark: rgb(30, 190, 214);
+  --mainBorderColor-dark: #fff;
+  --mainBgColor-dark: #0d1018;
 }
 
+body {
+  --mainTextColor: var(--mainTextColor-dark);
+  --secondaryTextColor: var(--secondaryTextColor-dark);
+  --mainLinkColor: var(--mainLinkColor-dark);
+  --mainBorderColor: var(--mainBorderColor-dark);
+  --mainBgColor: var(--mainBgColor-dark);
+}
+
+body.light-mode {
+  --mainTextColor: #333333;
+  --secondaryTextColor: #535353;
+  --mainLinkColor:  #000000;
+  --mainBorderColor: #000000;
+  --mainBgColor: #e1e1e1;
+} 
 
 *{
     font-family: 'Readex Pro';
@@ -30,7 +39,7 @@
 }
 
 body{
-    background-color: var(--mainBgColor);            
+    background-color: var(--mainBgColor);          
 }
 
 p, span, li{
@@ -136,18 +145,14 @@ li{
 .card--project{
     padding-top: 1em;
     padding-bottom: 1em;
-    color: #fff;
+    color: var(--mainTextColor);
     border-top: 1px solid var(--mainBorderColor);
 }
 
 .card--project a{
-    color: #fff;
+  color: var(--mainTextColor);
     transition: 0.3s;
-}
-
-.card--project a:hover{
-    color: rgb(30, 190,214);
-
+    font-weight: bold;
 }
 
 .card--work-history{
@@ -314,3 +319,15 @@ li{
     cursor: pointer;
   }
   
+  #mode-toggle {
+    top: calc(100px);
+    left: 50%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: var(--mainLinkColor);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
