@@ -154,15 +154,19 @@
         <section class="section--page" id="extra">
             <h2>EXTRACURRICULAR ACTIVITIES</h2>
             <div class="card--project">
-                <span>🏆 </span> <strong>Technical Head, IETE-ISF Student Chapter (12/2022-Present)
+                <span>🎗️ </span> <strong>Technical Head, IETE-ISF Student Chapter (12/2022-Present)
                 </strong>
                 <ul>
                     <li>Managed technical events and workshops, built projects for the
                         chapter, and guided and mentored juniors in their technical domain.</li>
                 </ul>
+                <div id="wrapper--viewmore__items">
+                    <div class="card--techstack">📷 <a href="https://www.instagram.com/p/CpPGFrkPb0B/?igshid=NjFhOGMzYTE3ZQ=="
+                            target="_blank"><strong>View More</strong></a></span></div>
+                </div>
             </div>
             <div class="card--project">
-                <span>🏆 </span> <strong>Campus Ambassador, HackerEarth (12/2022 - Present)
+                <span>🎗️ </span> <strong>Campus Ambassador, HackerEarth (12/2022 - Present)
                 </strong>
                 <ul>
                     <li>Creating awareness about HackerEarth and its various
@@ -170,7 +174,7 @@
                 </ul>
             </div>
             <div class="card--project">
-                <span>🏆 </span> <strong>Programme Representative, VIT Vellore (08/2021 - Present)
+                <span>🎗️ </span> <strong>Programme Representative, VIT Vellore (08/2021 - Present)
                 </strong>
                 <ul>
                     <li>Selected as the Programme Representative of my department for two consecutive years at VIT
@@ -184,7 +188,7 @@
                 </div>
             </div>
             <div class="card--project">
-                <span>🏆 </span> <strong>Mentee, Deakin University, Geelong, Australia (11/2022)
+                <span>🎗️ </span> <strong>Mentee, Deakin University, Geelong, Australia (11/2022)
                 </strong>
                 <ul>
                     <li>Represented my university in Deakin University's Blue Marble Study
@@ -216,7 +220,7 @@
             <h2>CERTIFICATIONS</h2>
             <div class="certifs">
                 <div class="card--project">
-                    <span>🏆 </span> <strong>Wipro TalentNext "FutureSkills" Program
+                    <span>📝 </span> <strong>Wipro TalentNext "FutureSkills" Program
                     </strong>
                     <ul>
                         <li>Successfully completed the "Artificial Intelligence Foundation" Course as part of the Wipro
@@ -230,7 +234,7 @@
                 </div>
 
                 <div class="card--project">
-                    <span>🏆 </span> <strong>Goldman Sachs Learning - ECHP 2022-23
+                    <span>📝 </span> <strong>Goldman Sachs Learning - ECHP 2022-23
                     </strong>
                     <ul>
                         <li>
@@ -246,10 +250,11 @@
                                 target="_blank"><strong>Accelerated Computer Science Fundamentals</strong></a></span>
                         </div>
                     </div>
-
                 </div>
             </div>
-        </section <section class="section--page" id="contact">
+        </section>
+        
+        <section class="section--page" id="contact">
         <h2>CONTACT ME</h2>
         <div class="contact-me">
             <p>Feel free to send me a message if you have any questions or comments.</p>
@@ -257,7 +262,7 @@
                 <label for="name">Name</label><br>
                 <input type="text" id="name" name="name" placeholder="Your Name...">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your email..">
+                <input type="email" id="email-from" name="email" placeholder="Your email..">
                 <label for="message">Message</label>
                 <textarea id="message" name="message" placeholder="Write your message.."></textarea>
                 <button type="submit">Submit</button>
@@ -304,20 +309,17 @@
         function sendEmail() {
             Email.send({
                 Host: "smtp.elasticemail.com",
-                Username: "username",
-                Password: "password",
-                To: 'them@website.com',
-                From: "you@isp.com",
-                Subject: "This is the subject",
-                Body: "And this is the body"
+                Username: "karthiksbh@gmail.com",
+                Password: "B244034534146FF3A9A173EBEE6CFEE79FDB",
+                To: 'karthiksbh@gmail.com',
+                From: 'karthiksbh@gmail.com',
+                Subject: "Received a query from " + document.getElementById("name").value,
+                Body: "Email of the sender: " + document.getElementById("email-from").value + "\nQuery is: " + document.getElementById("message").value
             }).then(
-                message => alert(message)
+                message => alert("Email Recived. Will get back soon. Thank You")
             );
         }
     </script>
 
 </body>
-
-<script src="app.js"></script>
-
 </html>
